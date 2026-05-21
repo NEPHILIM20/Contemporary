@@ -3,11 +3,693 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Asian Regionalism — History & Challenges</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Hello World</h1>
-    <h2>Welcome to my website</h2>
-    <p>This is a simple HTML document.</p>
+    <canvas id="particleCanvas"></canvas>
+
+    <nav id="navbar">
+      <div class="nav-inner">
+        <a href="#hero" class="nav-brand">
+          <div class="nav-logo">AR</div>
+          <span class="nav-title">Asian Regionalism</span>
+        </a>
+        <div class="nav-links" id="navLinks">
+          <a href="#overview" class="nav-link">Overview</a>
+          <a href="#comparison" class="nav-link">Comparison</a>
+          <a href="#history" class="nav-link">History</a>
+          <a href="#asean" class="nav-link">ASEAN</a>
+          <a href="#challenges" class="nav-link">Challenges</a>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <section id="hero" class="section hero-section">
+      <div class="hero-rings">
+        <div class="ring ring-1"></div>
+        <div class="ring ring-2"></div>
+        <div class="ring ring-3"></div>
+      </div>
+      <div class="container hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          History &amp; Challenges
+        </div>
+        <h1 class="hero-title">
+          <span class="gradient-text">Asian</span><br />
+          <span>Regionalism</span>
+        </h1>
+        <p class="hero-sub">
+          Exploring the forces that shaped Southeast Asia's regional cooperation
+          — from post-war survival to a unified vision of shared prosperity.
+        </p>
+        <div class="hero-goals">
+          <div class="goal-card reveal" style="--delay: 0ms">
+            <div
+              class="goal-num"
+              style="background: linear-gradient(135deg, #1a56db, #38bdf8)"
+            >
+              1
+            </div>
+            <p>Differentiate between regionalization and globalization</p>
+          </div>
+          <div class="goal-card reveal" style="--delay: 120ms">
+            <div
+              class="goal-num"
+              style="background: linear-gradient(135deg, #0891b2, #06b6d4)"
+            >
+              2
+            </div>
+            <p>
+              Identify factors leading to greater integration of the Asian
+              region
+            </p>
+          </div>
+          <div class="goal-card reveal" style="--delay: 240ms">
+            <div
+              class="goal-num"
+              style="background: linear-gradient(135deg, #7c3aed, #a78bfa)"
+            >
+              3
+            </div>
+            <p>Analyze how Asian states confront challenges of globalization</p>
+          </div>
+        </div>
+        <a href="#overview" class="scroll-cta">
+          <span>Explore</span>
+          <div class="scroll-wheel"><div class="scroll-dot"></div></div>
+        </a>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section id="overview" class="section observe-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-label" style="color: #38bdf8">Module 01</p>
+          <h2 class="section-title">
+            Core <span class="gradient-text">Concepts</span>
+          </h2>
+          <p class="section-sub">
+            Understanding the foundational vocabulary of Asian regionalism
+          </p>
+        </div>
+
+        <div class="def-grid">
+          <div class="def-card reveal" style="--delay: 0ms">
+            <div
+              class="def-header"
+              style="background: linear-gradient(135deg, #1a56db, #38bdf8)"
+            >
+              <div class="def-icon">🌏</div>
+              <h3>Region</h3>
+            </div>
+            <div class="def-body">
+              <ul>
+                <li>
+                  <span class="dot" style="background: #38bdf8"></span>Groups of
+                  countries in the same geographically specified area
+                </li>
+                <li>
+                  <span class="dot" style="background: #38bdf8"></span>Defined
+                  by unique topographical features, economic activities, and
+                  historical contexts
+                </li>
+                <li>
+                  <span class="dot" style="background: #38bdf8"></span
+                  >Distinguished by dialects, social manners, and cultural
+                  identity
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="def-card reveal" style="--delay: 120ms">
+            <div
+              class="def-header"
+              style="background: linear-gradient(135deg, #7c3aed, #a78bfa)"
+            >
+              <div class="def-icon">⚙️</div>
+              <h3>Regionalization</h3>
+            </div>
+            <div class="def-body">
+              <ul>
+                <li>
+                  <span class="dot" style="background: #a78bfa"></span>Process
+                  of dividing an area into smaller segments called regions
+                </li>
+                <li>
+                  <span class="dot" style="background: #a78bfa"></span>Division
+                  of a nation into states or provinces
+                </li>
+                <li>
+                  <span class="dot" style="background: #a78bfa"></span>In
+                  economic context, serves as a Management Tool
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="def-card reveal" style="--delay: 240ms">
+            <div
+              class="def-header"
+              style="background: linear-gradient(135deg, #059669, #34d399)"
+            >
+              <div class="def-icon">🤝</div>
+              <h3>Regionalism</h3>
+            </div>
+            <div class="def-body">
+              <ul>
+                <li>
+                  <span class="dot" style="background: #34d399"></span>Created
+                  as a sort of counter-globalization
+                </li>
+                <li>
+                  <span class="dot" style="background: #34d399"></span>Regional
+                  organizations prefer regional partners over the rest of the
+                  world
+                </li>
+                <li>
+                  <span class="dot" style="background: #34d399"></span>A
+                  political and economic philosophy favoring regional
+                  cooperation
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section id="comparison" class="section observe-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-label" style="color: #a78bfa">Module 02</p>
+          <h2 class="section-title">
+            Globalization <span class="vs">vs</span>
+            <span class="gradient-text">Regionalization</span>
+          </h2>
+        </div>
+
+        <div class="cmp-table">
+          <div class="cmp-head reveal">
+            <div class="cmp-aspect-head"></div>
+            <div class="cmp-col-head blue">🌍 Globalization</div>
+            <div class="cmp-col-head purple">🗺️ Regionalization</div>
+          </div>
+
+          <div class="cmp-row reveal" style="--delay: 0ms">
+            <div class="cmp-aspect">
+              <span class="aspect-icon">🌐</span><span>Nature</span>
+            </div>
+            <div class="cmp-cell">
+              Promotes integration of economies across state borders all around
+              the world
+            </div>
+            <div class="cmp-cell">
+              Divides an area into smaller, more manageable segments
+            </div>
+          </div>
+          <div class="cmp-row reveal" style="--delay: 80ms">
+            <div class="cmp-aspect">
+              <span class="aspect-icon">📈</span><span>Market</span>
+            </div>
+            <div class="cmp-cell">
+              Allows many corporations to trade internationally, enabling a free
+              market
+            </div>
+            <div class="cmp-cell">
+              Monopolies are more likely to develop within a limited regional
+              market
+            </div>
+          </div>
+          <div class="cmp-row reveal" style="--delay: 160ms">
+            <div class="cmp-aspect">
+              <span class="aspect-icon">🎭</span><span>Culture</span>
+            </div>
+            <div class="cmp-cell">
+              Accelerates multiculturalism through free and inexpensive movement
+              of people
+            </div>
+            <div class="cmp-cell">
+              Does not actively support multiculturalism across different areas
+            </div>
+          </div>
+          <div class="cmp-row reveal" style="--delay: 240ms">
+            <div class="cmp-aspect">
+              <span class="aspect-icon">❤️</span><span>Aid</span>
+            </div>
+            <div class="cmp-cell">
+              Globalized communities are more willing to aid disaster-stricken
+              countries
+            </div>
+            <div class="cmp-cell">
+              A regionalized area typically does not get involved in affairs of
+              other areas
+            </div>
+          </div>
+          <div class="cmp-row reveal" style="--delay: 320ms">
+            <div class="cmp-aspect">
+              <span class="aspect-icon">💻</span><span>Technology</span>
+            </div>
+            <div class="cmp-cell">
+              Globalization has driven great technological advances across
+              borders
+            </div>
+            <div class="cmp-cell">
+              Advanced technology is rarely available within a single country or
+              region
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section id="history" class="section observe-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-label" style="color: #34d399">Module 03</p>
+          <h2 class="section-title">
+            History of <span class="gradient-text">Regionalization</span>
+          </h2>
+          <p class="section-sub">in Southeast Asia</p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-line"></div>
+
+          <div class="tl-item reveal left" style="--delay: 0ms">
+            <div class="tl-card" style="--accent: #38bdf8">
+              <span class="tl-year">Post WWII</span>
+              <h3>Birth of Cooperation</h3>
+              <p>
+                After the Great War, countries sought new ways to manage shared
+                interests, threats, and opportunities.
+              </p>
+            </div>
+            <div
+              class="tl-dot"
+              style="background: #38bdf8; box-shadow: 0 0 12px #38bdf880"
+            ></div>
+          </div>
+
+          <div class="tl-item reveal right" style="--delay: 100ms">
+            <div class="tl-card" style="--accent: #a78bfa">
+              <span class="tl-year">Cold War Era</span>
+              <h3>Marginalized Economies Unite</h3>
+              <p>
+                Marginalized economies collaborated with neighboring countries
+                to gain better access to global markets.
+              </p>
+            </div>
+            <div
+              class="tl-dot"
+              style="background: #a78bfa; box-shadow: 0 0 12px #a78bfa80"
+            ></div>
+          </div>
+
+          <div class="tl-item reveal left" style="--delay: 200ms">
+            <div class="tl-card" style="--accent: #34d399">
+              <span class="tl-year">1960s–1970s</span>
+              <h3>New Regionalism Emerges</h3>
+              <p>
+                States, non-state actors, and ideological groups shaped regional
+                cooperation driven by global changes.
+              </p>
+            </div>
+            <div
+              class="tl-dot"
+              style="background: #34d399; box-shadow: 0 0 12px #34d39980"
+            ></div>
+          </div>
+
+          <div class="tl-item reveal right" style="--delay: 300ms">
+            <div class="tl-card" style="--accent: #f59e0b">
+              <span class="tl-year">August 8, 1967</span>
+              <h3>ASEAN Founded</h3>
+              <p>
+                Five Southeast Asian nations formed ASEAN in Bangkok, Thailand —
+                a landmark in regional cooperation.
+              </p>
+            </div>
+            <div
+              class="tl-dot"
+              style="background: #f59e0b; box-shadow: 0 0 12px #f59e0b80"
+            ></div>
+          </div>
+
+          <div class="tl-item reveal left" style="--delay: 400ms">
+            <div class="tl-card" style="--accent: #ec4899">
+              <span class="tl-year">Post-Cold War</span>
+              <h3>Expansion &amp; AFTA</h3>
+              <p>
+                ASEAN expanded its membership and created the ASEAN Free Trade
+                Area (AFTA) to strengthen economic growth.
+              </p>
+            </div>
+            <div
+              class="tl-dot"
+              style="background: #ec4899; box-shadow: 0 0 12px #ec489980"
+            ></div>
+          </div>
+
+          <div class="tl-item reveal right" style="--delay: 500ms">
+            <div class="tl-card" style="--accent: #f97316">
+              <span class="tl-year">1997–1998</span>
+              <h3>Asian Financial Crisis</h3>
+              <p>
+                Currency collapse and debt crises struck the region, prompting
+                ASEAN to seek stronger financial cooperation.
+              </p>
+            </div>
+            <div
+              class="tl-dot"
+              style="background: #f97316; box-shadow: 0 0 12px #f9731680"
+            ></div>
+          </div>
+
+          <div class="tl-item reveal left" style="--delay: 600ms">
+            <div class="tl-card" style="--accent: #06b6d4">
+              <span class="tl-year">Post-2001</span>
+              <h3>Wider Regionalism</h3>
+              <p>
+                Following Lee Kuan Yew's vision, ASEAN shifted toward
+                integrating with China and beyond — "Unity in Diversity."
+              </p>
+            </div>
+            <div
+              class="tl-dot"
+              style="background: #06b6d4; box-shadow: 0 0 12px #06b6d480"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section id="asean" class="section observe-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-label" style="color: #f59e0b">Module 04</p>
+          <h2 class="section-title">
+            The <span class="gradient-text-gold">ASEAN</span> Story
+          </h2>
+          <p class="section-sub">
+            Founded on August 8, 1967 in Bangkok, Thailand
+          </p>
+        </div>
+
+        <p class="founders-label reveal">— Founding Members —</p>
+        <div class="founders-grid">
+          <div class="founder-card reveal" style="--delay: 0ms">
+            <div class="founder-flag">🇮🇩</div>
+            <strong>Adam Malik</strong><span>Indonesia</span>
+          </div>
+          <div class="founder-card reveal" style="--delay: 80ms">
+            <div class="founder-flag">🇵🇭</div>
+            <strong>Narciso R. Ramos</strong><span>Philippines</span>
+          </div>
+          <div class="founder-card reveal" style="--delay: 160ms">
+            <div class="founder-flag">🇲🇾</div>
+            <strong>Tun Abdul Razak</strong><span>Malaysia</span>
+          </div>
+          <div class="founder-card reveal" style="--delay: 240ms">
+            <div class="founder-flag">🇸🇬</div>
+            <strong>S. Rajaratnam</strong><span>Singapore</span>
+          </div>
+          <div class="founder-card reveal" style="--delay: 320ms">
+            <div class="founder-flag">🇹🇭</div>
+            <strong>Thanat Khoman</strong><span>Thailand</span>
+          </div>
+        </div>
+
+        <div class="asean-grid">
+          <div
+            class="asean-card reveal"
+            style="--delay: 0ms; --accent: #38bdf8"
+          >
+            <div class="asean-icon">🕊️</div>
+            <h3>Peace &amp; Stability</h3>
+            <p>
+              Maintain peace and stability by respecting justice, law, and the
+              principles of the United Nations.
+            </p>
+          </div>
+          <div
+            class="asean-card reveal"
+            style="--delay: 80ms; --accent: #a78bfa"
+          >
+            <div class="asean-icon">🛡️</div>
+            <h3>Anti-Communism</h3>
+            <p>
+              Formed with US support to prevent the spread of communism and
+              ensure regional stability during the Cold War.
+            </p>
+          </div>
+          <div
+            class="asean-card reveal"
+            style="--delay: 160ms; --accent: #34d399"
+          >
+            <div class="asean-icon">📚</div>
+            <h3>Holistic Development</h3>
+            <p>
+              Promote cooperation in economic, social, cultural, and educational
+              fields to achieve overall development.
+            </p>
+          </div>
+          <div
+            class="asean-card reveal"
+            style="--delay: 240ms; --accent: #f59e0b"
+          >
+            <div class="asean-icon">💹</div>
+            <h3>Economic Growth</h3>
+            <p>
+              After the Cold War, ASEAN expanded and created the ASEAN Free
+              Trade Area (AFTA) to strengthen regional growth.
+            </p>
+          </div>
+          <div
+            class="asean-card reveal"
+            style="--delay: 320ms; --accent: #ec4899"
+          >
+            <div class="asean-icon">🔗</div>
+            <h3>Unity &amp; Cooperation</h3>
+            <p>
+              Evolved into a group focused on unity, cooperation, and shared
+              economic interests among Southeast Asian nations.
+            </p>
+          </div>
+          <div
+            class="asean-card reveal"
+            style="--delay: 400ms; --accent: #06b6d4"
+          >
+            <div class="asean-icon">🌐</div>
+            <h3>ASEAN+3</h3>
+            <p>
+              Expanded cooperation to include China, Japan, and South Korea —
+              focusing on financial stability and trade integration.
+            </p>
+          </div>
+        </div>
+
+        <blockquote class="asean-quote reveal">
+          <p>
+            "ASEAN cooperation was mainly influenced by external factors,
+            especially the fear that communism would spread in the region. It
+            was created to promote stability, and over time, it developed into a
+            group focused on unity, cooperation, and economic growth."
+          </p>
+          <cite>— Akkerman (2007)</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section id="challenges" class="section observe-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-label" style="color: #ec4899">Module 05</p>
+          <h2 class="section-title">
+            Challenges &amp; <span class="gradient-text-pink">Response</span>
+          </h2>
+          <p class="section-sub">
+            How ASEAN navigated crises, geopolitical pressure, and security
+            threats
+          </p>
+        </div>
+
+        <div class="challenge-grid">
+          <div
+            class="challenge-card reveal"
+            style="--delay: 0ms; --accent: #f97316"
+          >
+            <div class="ch-top">
+              <span class="ch-icon">💸</span>
+              <div>
+                <span class="ch-year">1997–1998</span>
+                <h3>Asian Financial Crisis</h3>
+              </div>
+            </div>
+            <p class="ch-desc">
+              Currency collapse, economic instability, and debt crises struck
+              many Asian economies.
+            </p>
+            <div class="ch-response">
+              <p class="ch-response-label">Response</p>
+              <p>
+                ASEAN shifted toward regional financial cooperation, reducing
+                dependence on the IMF and the United States, developing
+                Asian-led financial frameworks.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="challenge-card reveal"
+            style="--delay: 100ms; --accent: #ef4444"
+          >
+            <div class="ch-top">
+              <span class="ch-icon">💣</span>
+              <div>
+                <span class="ch-year">2001 onward</span>
+                <h3>Post-9/11 Geopolitics</h3>
+              </div>
+            </div>
+            <p class="ch-desc">
+              The 2001 bombings shifted global focus toward a "War on Terror,"
+              placing Southeast Asia under high scrutiny.
+            </p>
+            <div class="ch-response">
+              <p class="ch-response-label">Response</p>
+              <p>
+                ASEAN acted with extreme caution to avoid provoking diverse
+                local populations while cooperating on counter-terrorism
+                efforts.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="challenge-card reveal"
+            style="--delay: 200ms; --accent: #8b5cf6"
+          >
+            <div class="ch-top">
+              <span class="ch-icon">🏛️</span>
+              <div>
+                <span class="ch-year">Post-Cold War</span>
+                <h3>US Unilateralism</h3>
+              </div>
+            </div>
+            <p class="ch-desc">
+              Superpower pressure demanded compliance with Western security
+              mandates, threatening regional autonomy.
+            </p>
+            <div class="ch-response">
+              <p class="ch-response-label">Response</p>
+              <p>
+                ASEAN pursued strategic multilateralism, engaging the EU,
+                Russia, and the SCO to ensure no single superpower dictated
+                regional affairs.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="challenge-card reveal"
+            style="--delay: 300ms; --accent: #ec4899"
+          >
+            <div class="ch-top">
+              <span class="ch-icon">🔫</span>
+              <div>
+                <span class="ch-year">2000s</span>
+                <h3>Regional Security Threats</h3>
+              </div>
+            </div>
+            <p class="ch-desc">
+              The rise of regional terrorist networks forced a re-evaluation of
+              internal defense and porous borders.
+            </p>
+            <div class="ch-response">
+              <p class="ch-response-label">Response</p>
+              <p>
+                ASEAN developed collaborative security frameworks and
+                intelligence-sharing mechanisms across member states.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="pillars-title reveal">ASEAN's Strategic Pillars</h3>
+        <div class="pillars-grid">
+          <div class="pillar reveal" style="--delay: 0ms">
+            <span class="pillar-icon">🌐</span><strong>Open Regionalism</strong>
+            <p>
+              Engaging with partners outside the region while maintaining
+              regional identity
+            </p>
+          </div>
+          <div class="pillar reveal" style="--delay: 80ms">
+            <span class="pillar-icon">🏳️</span><strong>Sovereignty</strong>
+            <p>
+              Preserving each nation's right to self-determination and
+              governance
+            </p>
+          </div>
+          <div class="pillar reveal" style="--delay: 160ms">
+            <span class="pillar-icon">🤐</span><strong>Non-interference</strong>
+            <p>Member states do not meddle in each other's domestic affairs</p>
+          </div>
+          <div class="pillar reveal" style="--delay: 240ms">
+            <span class="pillar-icon">🗳️</span><strong>Consensus</strong>
+            <p>All major decisions require agreement from all member states</p>
+          </div>
+        </div>
+
+        <div class="unity-banner reveal">
+          <div class="unity-glow"></div>
+          <div class="unity-content">
+            <h2 class="unity-title">Unity in Diversity</h2>
+            <p>
+              ASEAN's enduring vision — proving that cultural differences are a
+              source of strength, not conflict, and that shared challenges are
+              best met through collective action.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container footer-inner">
+        <div class="footer-logo">AR</div>
+        <p class="footer-brand">Asian Regionalism — History &amp; Challenges</p>
+        <nav class="footer-links">
+          <a href="#overview">Overview</a>
+          <a href="#comparison">Comparison</a>
+          <a href="#history">History</a>
+          <a href="#asean">ASEAN</a>
+          <a href="#challenges">Challenges</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
