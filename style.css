@@ -44,7 +44,6 @@ body {
   line-height: 1.6;
 }
 
-/* Scrollbar */
 ::-webkit-scrollbar {
   width: 5px;
 }
@@ -255,7 +254,6 @@ body {
   line-height: 1.7;
 }
 
-/* Gradient text helpers */
 .gradient-text {
   background: linear-gradient(135deg, #38bdf8, #818cf8, #e879f9);
   -webkit-background-clip: text;
@@ -281,7 +279,6 @@ body {
   color: var(--text-dim);
 }
 
-/* Glass surfaces */
 .glass {
   background: rgba(255, 255, 255, 0.045);
   backdrop-filter: blur(12px);
@@ -390,7 +387,6 @@ body {
   }
 }
 
-/* Reveal on scroll */
 .reveal {
   opacity: 0;
   transform: translateY(36px);
@@ -680,7 +676,6 @@ body {
 }
 
 .cmp-aspect-head {
-  /* empty */
 }
 
 .cmp-col-head {
@@ -809,7 +804,6 @@ body {
   grid-row: 1;
 }
 
-/* for right-aligned items we need card after dot in DOM order */
 .tl-item.right {
   grid-template-columns: 1fr 28px 1fr;
 }
@@ -1092,7 +1086,6 @@ body {
   line-height: 1.6;
 }
 
-/* Pillars */
 .pillars-title {
   font-family: var(--font-serif);
   font-size: 1.4rem;
@@ -1147,7 +1140,6 @@ body {
   line-height: 1.55;
 }
 
-/* Unity banner */
 .unity-banner {
   position: relative;
   border-radius: 2rem;

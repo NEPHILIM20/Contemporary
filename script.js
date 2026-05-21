@@ -1,8 +1,3 @@
-/* ═══════════════════════════════════════════
-   ASIAN REGIONALISM — script.js
-═══════════════════════════════════════════ */
-
-/* ─── 1. PARTICLE CANVAS ─────────────────── */
 (function initParticles() {
   const canvas = document.getElementById("particleCanvas");
   if (!canvas) return;
@@ -36,7 +31,6 @@
   function draw() {
     ctx.clearRect(0, 0, W, H);
 
-    // Update & draw dots
     for (const p of particles) {
       p.x += p.vx;
       p.y += p.vy;
@@ -49,7 +43,6 @@
       ctx.fill();
     }
 
-    // Draw connections
     for (let i = 0; i < particles.length; i++) {
       for (let j = i + 1; j < particles.length; j++) {
         const dx = particles[i].x - particles[j].x;
@@ -84,24 +77,20 @@
   init();
 })();
 
-/* ─── 2. NAVBAR: scroll style + hamburger ── */
 (function initNavbar() {
   const navbar = document.getElementById("navbar");
   const hamburger = document.getElementById("hamburger");
   const navLinks = document.getElementById("navLinks");
 
-  // Scroll class
   window.addEventListener("scroll", () => {
     navbar.classList.toggle("scrolled", window.scrollY > 50);
   });
 
-  // Hamburger toggle
   hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("open");
     navLinks.classList.toggle("open");
   });
 
-  // Close menu when a link is clicked
   navLinks.querySelectorAll(".nav-link").forEach((link) => {
     link.addEventListener("click", () => {
       hamburger.classList.remove("open");
@@ -109,7 +98,6 @@
     });
   });
 
-  // Active nav link on scroll
   const sections = document.querySelectorAll("section[id]");
   const links = navLinks.querySelectorAll(".nav-link");
 
@@ -130,7 +118,6 @@
   sections.forEach((s) => io.observe(s));
 })();
 
-/* ─── 3. SCROLL-REVEAL ───────────────────── */
 (function initReveal() {
   const items = document.querySelectorAll(".reveal");
 
@@ -140,7 +127,6 @@
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          // Honour CSS custom property --delay for staggering
           const delay = entry.target.style.getPropertyValue("--delay") || "0ms";
           setTimeout(() => {
             entry.target.classList.add("visible");
@@ -155,7 +141,6 @@
   items.forEach((el) => observer.observe(el));
 })();
 
-/* ─── 4. SMOOTH ANCHOR SCROLL (polyfill) ─── */
 (function initSmoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
@@ -167,7 +152,6 @@
   });
 })();
 
-/* ─── 5. COMPARISON TABLE HOVER COLOUR ───── */
 (function initTableFx() {
   document.querySelectorAll(".cmp-row").forEach((row, idx) => {
     const colors = ["#38bdf8", "#a78bfa", "#34d399", "#ec4899", "#06b6d4"];
@@ -185,12 +169,10 @@
   });
 })();
 
-/* ─── 6. TIMELINE LEFT/RIGHT FADE ────────── */
 (function initTimelineReveal() {
   const leftItems = document.querySelectorAll(".tl-item.left");
   const rightItems = document.querySelectorAll(".tl-item.right");
 
-  // On mobile the .left/.right distinction disappears, so we handle both
   leftItems.forEach((el) => {
     el.style.opacity = "0";
     el.style.transform = "translateX(-40px)";
@@ -223,9 +205,8 @@
   [...leftItems, ...rightItems].forEach((el) => io.observe(el));
 })();
 
-/* ─── 7. CHALLENGE CARD TILT EFFECT ──────── */
 (function initTilt() {
-  if (window.matchMedia("(hover: none)").matches) return; // skip touch
+  if (window.matchMedia("(hover: none)").matches) return;
 
   document
     .querySelectorAll(".challenge-card, .def-card, .asean-card")
@@ -248,9 +229,7 @@
     });
 })();
 
-/* ─── 8. ACTIVE SECTION PROGRESS BAR ─────── */
 (function initProgressBar() {
-  // Inject a thin progress bar at the very top
   const bar = document.createElement("div");
   Object.assign(bar.style, {
     position: "fixed",
@@ -274,12 +253,10 @@
   });
 })();
 
-/* ─── 9. TYPING EFFECT ON HERO BADGE ─────── */
 (function initTyping() {
   const badge = document.querySelector(".hero-badge");
   if (!badge) return;
 
-  // Just a subtle cursor blink after the text — cosmetic
   const cursor = document.createElement("span");
   cursor.textContent = "|";
   Object.assign(cursor.style, {
@@ -298,9 +275,7 @@
   badge.appendChild(cursor);
 })();
 
-/* ─── 10. COUNTER ANIMATION ON ASEAN DATE ── */
 (function initDateReveal() {
-  // Find section header sub-text for the ASEAN section and pop the date
   const sub = document.querySelector("#asean .section-sub");
   if (!sub) return;
 
