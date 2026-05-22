@@ -153,10 +153,23 @@
 })();
 
 (function initTableFx() {
+  const aspects = [
+    "Nature",
+    "Market",
+    "Culture & Society",
+    "Aid",
+    "Technology",
+  ];
+  const colLabels = ["🌍 Globalization", "🗺️ Regionalization"];
+  const colors = ["#38bdf8", "#a78bfa", "#34d399", "#ec4899", "#06b6d4"];
+
   document.querySelectorAll(".cmp-row").forEach((row, idx) => {
-    const colors = ["#38bdf8", "#a78bfa", "#34d399", "#ec4899", "#06b6d4"];
     const color = colors[idx % colors.length];
-    row.querySelectorAll(".cmp-cell").forEach((cell) => {
+    const cells = row.querySelectorAll(".cmp-cell");
+
+    cells.forEach((cell, ci) => {
+      cell.setAttribute("data-label", colLabels[ci] || "");
+
       cell.addEventListener("mouseenter", () => {
         cell.style.borderColor = `${color}55`;
         cell.style.background = `${color}0d`;
@@ -275,6 +288,48 @@
   badge.appendChild(cursor);
 })();
 
+(function initMobileComparisonLabels() {
+  const aspects = ["Nature", "Market", "Culture", "Aid", "Technology"];
+  const rows = document.querySelectorAll(".cmp-row");
+
+  rows.forEach((row, i) => {
+    const cells = row.querySelectorAll(".cmp-cell");
+    if (cells.length < 2) return;
+    const label = aspects[i] || "";
+
+    cells[0].setAttribute("data-label", `🌍 ${label}`);
+    cells[1].setAttribute("data-label", `🗺️ ${label}`);
+  });
+})();
+
+(function preventDoubleTapZoom() {
+  let lastTouch = 0;
+  document
+    .querySelectorAll(
+      ".def-card, .goal-card, .asean-card, .challenge-card, .founder-card, .pillar",
+    )
+    .forEach((el) => {
+      el.addEventListener(
+        "touchend",
+        (e) => {
+          const now = Date.now();
+          if (now - lastTouch < 300) e.preventDefault();
+          lastTouch = now;
+        },
+        { passive: false },
+      );
+    });
+})();
+
+(function initScrollHint() {
+  const cta = document.querySelector(".scroll-cta");
+  if (!cta) return;
+  setTimeout(() => {
+    if (window.scrollY < 80) {
+      cta.style.animation = "float 1s ease-in-out 3";
+    }
+  }, 3000);
+})();
 (function initDateReveal() {
   const sub = document.querySelector("#asean .section-sub");
   if (!sub) return;
