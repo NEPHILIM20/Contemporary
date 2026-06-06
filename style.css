@@ -1,3 +1,6 @@
+/* ═══════════════════════════════════════════
+   RESET & ROOT VARIABLES
+═══════════════════════════════════════════ */
 *,
 *::before,
 *::after {
@@ -966,6 +969,9 @@ body {
   letter-spacing: 0.05em;
 }
 
+/* ═══════════════════════════════════════════
+   CHALLENGES
+═══════════════════════════════════════════ */
 .challenge-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1710,5 +1716,105 @@ footer {
   }
   50% {
     transform: translateY(-8px);
+  }
+}
+
+.footer-members {
+  margin: 0.5rem 0 0.25rem;
+  text-align: center;
+}
+
+.footer-members-label {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 0.75rem;
+}
+
+.footer-members-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.3rem 1rem;
+}
+
+.footer-members-list li {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: #38bdf8;
+  letter-spacing: 0.04em;
+  position: relative;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+.footer-members-list li:hover {
+  background: rgba(56, 189, 248, 0.08);
+  color: #e2e8f0;
+}
+
+@media (max-width: 600px) {
+  .footer-members-list {
+    gap: 0.25rem 0.75rem;
+  }
+  .footer-members-list li {
+    font-size: 0.65rem;
+  }
+}
+
+.hero-members {
+  margin-top: 3rem;
+  animation: fadeInUp 1s ease 0.85s both;
+}
+
+.hero-members-label {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 0.875rem;
+}
+
+.hero-members-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem 0.6rem;
+}
+
+.hero-members-list span {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: rgba(56, 189, 248, 0.75);
+  letter-spacing: 0.04em;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  background: rgba(56, 189, 248, 0.05);
+  transition: all 0.25s ease;
+  cursor: default;
+}
+
+.hero-members-list span:hover {
+  color: #e2e8f0;
+  background: rgba(56, 189, 248, 0.12);
+  border-color: rgba(56, 189, 248, 0.35);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .hero-members {
+    margin-top: 2rem;
+  }
+  .hero-members-list span {
+    font-size: 0.65rem;
+    padding: 0.25rem 0.6rem;
   }
 }
